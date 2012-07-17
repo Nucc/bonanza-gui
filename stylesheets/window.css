@@ -1,0 +1,123 @@
+
+.frame {
+    background: #F2F2F2;
+}
+
+.titleBar {
+    height: 20px;
+
+}
+
+.titleBorderLeft {
+    width: 1px;
+    background: #000000;
+}
+
+.titleBorderRight {
+    width: 1px;
+    background: #000000;
+}
+
+.titleContent {
+    background: url('../windows/Human/titlebar.png') repeat-x;
+    left: 1px;
+    right: 1px;
+}
+
+.titleIcon {
+    left: 2px;
+    height: 16px;
+    width: 16px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.close {
+    width: 20px;
+    height: 14px;
+    top: 3px;
+    bottom: 3px;
+    right: 2px;
+    background: url('../windows/Human/close.png');
+}
+
+.maximize {
+    width: 20px;
+    height: 14px;
+    top: 3px;
+    bottom: 3px;
+    right: 24px;
+    background: url('../windows/Human/maximaze.png');
+}
+
+.minimize {
+    width: 20px;
+    height: 14px;
+    top: 3px;
+    bottom: 3px;
+    right: 46px;
+    background: url('../windows/Human/minimize.png');
+}
+
+
+.titleText {
+    right: 66px;
+    left: 25px;
+    top: 3px;
+    font-family: Sans;
+    font-weight: bold;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+.contentBorderLeft {
+    width: 2px;
+    background: #000000;
+}
+
+.contentNode {
+    /*left: 1px;
+    right: 1px;*/
+}
+
+.contentBorderRight {
+    width: 2px;
+    background: #000000;
+}
+
+.bottom
+{
+    height: 2px;
+}
+
+.bottomBorderLeft {
+    width: 5px;
+    height: 2px;
+}
+
+.bottomBorder {
+    left: 0px;
+    right: 0px;
+    height: 2px;
+    background: #000000;
+}
+
+.bottomBorderRight {
+    width: 5px;
+    height: 2px;
+}
+
+.listboxElement
+{
+    font-family: Verdana;
+    font-size: 11px;
+    background: #FFFFFF;
+    border-bottom: 1px dotted #F0F0E0;
+    padding: 2px;
+}
+
+.listboxSelected
+{
+    background: #c2c2c2;
+    color: #000000;
+}

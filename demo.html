@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" id="BonanzaGUI">
+
+    <head>
+            <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+            </script>
+            <script type="text/javascript">
+            _uacct = "UA-1736762-1";
+            urchinTracker();
+            </script>
+            <link rel="stylesheet" type="text/css" href="stylesheets/window.css" />
+
+            <!-- PROTOTYPE -->
+            <script src="lib/prototype.js" type="text/javascript"></script>
+            <script src="Base.js" type="text/javascript"></script>
+            <script src="BElement.js" type="text/javascript"></script>
+            <!-- BWidgets -->
+            <script src="BPaintDevice.js" type="text/javascript"></script>
+            <script src="BDesktop.js" type="text/javascript"></script>
+            <script src="BException.js" type="text/javascript"></script>
+
+            <script src="BObject.js" type="text/javascript"></script>
+            <script src="BImage.js" type="text/javascript"></script>
+            <script src="BWidget.js" type="text/javascript"></script>
+            <script src="BWindow.js" type="text/javascript"></script>
+            <script src="BButton.js" type="text/javascript"></script>
+            <script src="BComboBox.js" type="text/javascript"></script>
+            <script src="BDock.js" type="text/javascript"></script>
+            <script src="BScrollView.js" type="text/javascript"></script>
+            <script src="BListBox.js" type="text/javascript"></script>
+
+
+        <script language='javascript'>
+                window.fullScreen = 1;
+                a = new BWidget();
+                a.show();
+                a.setWidth(445);
+                a.setHeight(55);
+
+                b = new BButton();
+                b.show();
+                b.setWidth(445);
+                b.setHeight(55);
+                b.setText('This is a button...');
+                connect(b, 'onclick', this, 'selection');
+
+                function selection()
+                {
+                    box.setSelectionMode( SelectionMode.Multi );
+                }
+
+                d = new BWidget();
+                for( var i=0; i<9; i++)
+                {
+                    var c = new BButton(d);
+                    c.setHeight(50);
+                    c.setWidth(50);
+                    c.setText(i+1);
+                    c.setX(50*(i%3)+1);
+                    c.setY(50*parseInt(i/3));
+                    c.show();
+                    connect( c, 'onclick', c, 'hide');
+                }
+                d.setWidth(150);
+                d.setHeight(150);
+
+                d.show();
+                d.setCaption('3x3 :)');
+
+                var dock = new BDock;
+                var icon = new BImage('icon/finder.png', 50, 50 );
+                dock.addImage( icon );
+                var icon = new BImage('icon/mail.png', 50, 50 );
+                dock.addImage( icon );
+                var icon = new BImage('icon/browser.png', 50, 50 );
+                dock.addImage( icon );
+                dock.show();
+
+                var icon = new BImage('icon/editor.png', 50, 50 );
+                dock.addImage( icon );
+                var icon = new BImage('icon/konsole.png', 50, 50 );
+                dock.addImage( icon );
+
+                e = new BComboBox();
+                e.setWidth(150);
+                e.setHeight(20);
+                e.insertItem('This', 0);
+                e.insertItem('is', 1);
+                e.insertItem('a', 2);
+                e.insertItem('combobox', 2);
+                e.show();
+
+                connect( e, 'highlighted', this, 'changeButton');
+
+                box = new BListBox(a, 'my listbox');
+                box.setWidth(100);
+                box.setHeight(60);
+                box.show();
+
+                box.insertItem('one',0);
+                box.insertItem('two',1);
+                box.insertItem('three', 1);
+
+
+
+                function changeButton()
+                {
+                    b.setText( e.currentText() );
+                }
+
+        </script>
+
+    </head>
+</html>
