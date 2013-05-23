@@ -3,6 +3,8 @@ Bonanza GUI
 
 The aim of this project is to implement the Qt UI framework with window manager in javascript.
 
+Demo video: http://www.youtube.com/watch?v=hYE8oewhFkE
+
 The implemented features:
 
 BWidget
